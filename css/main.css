@@ -17,12 +17,20 @@
 .white {
     color: white;
 }
+
+.align-center {
+    width: 300px;
+    margin:0 auto;
+    padding: 24px;
+}
+
 .outer {
     width: 64px;
     background: #d4d4d4;
     margin: 0 auto;
     padding: 35px;
 }
+
 .inner {
     background: #ADADAD;
     padding: 32px;

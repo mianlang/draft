@@ -25,7 +25,7 @@ export default class FriendsContainer extends React.Component {
     console.log('never componentWillUnmount');
   }
   addFriend(friend) {
-    console.log(friend, typeof(friend))
+    console.log(friend, typeof (friend))
     this.setState((state) => ({
       friends: state
         .friends
@@ -33,11 +33,12 @@ export default class FriendsContainer extends React.Component {
     }));
   }
   render() {
+    const className = this.props;
     return (
-      <div>
+      <div class={this.props.className}>
         <h3>Name: {this.state.name}</h3>
-        <AddFriend addNew={this.addFriend}/>
-        <ShowList names={this.state.friends}/>
+        <AddFriend addNew={this.addFriend} />
+        <ShowList names={this.state.friends} />
       </div>
     )
   }
@@ -57,13 +58,13 @@ class AddFriend extends React.Component {
       .bind(this);
   }
   updateNewFriend(e) {
-    this.setState({newFriend: e.target.value});
+    this.setState({ newFriend: e.target.value });
   }
   handleAddNew() {
     this
       .props
       .addNew(this.state.newFriend);
-    this.setState({newFriend: ''})
+    this.setState({ newFriend: '' })
   }
   componentDidMount() {
     console.log('AddFriend componentDidMount');
@@ -75,15 +76,16 @@ class AddFriend extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" value={this.state.newFriend} onBlur={this.handleAddNew} /* will add an additional empty string to friend */
-          /* when click the add Friend button */
-          /* because it handleAddNew is triggered twice - onClick in button and onBlur in input */
+        {/* 回车或点击添加按钮生效 */}
+        <input
+          type="text"
+          value={this.state.newFriend}
           onKeyPress={(e) => {
-          var keycode = e.which || e.keyCode;
-          if (keycode == 13) {
-            this.handleAddNew();
-          }
-        }} onChange={this.updateNewFriend}/>
+            var keycode = e.which || e.keyCode;
+            if (keycode == 13) {
+              this.handleAddNew();
+            }
+          }} onChange={this.updateNewFriend} />
         <button onClick={this.handleAddNew}>Add Friend</button>
       </div>
     )

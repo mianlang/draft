@@ -10,7 +10,7 @@ import FriendsContainer from './js/FriendsContainer';
 function App() {
   return (
     <div class='grey-bg'>
-      <FriendsContainer/>
+      <FriendsContainer className='align-center' />
       <div class="outer">
         <div class="inner"></div>
       </div>
