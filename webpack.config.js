@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
+  mode: 'development',
   entry: [
     'react-hot-loader/patch',
     // 入口文件
@@ -8,7 +9,8 @@ module.exports = {
   ],
   output: {
     filename: 'pack.js',
-    path: __dirname
+    path: __dirname,
+    // publicPath: '/assets/'
   },
   resolve: {
     alias: {
@@ -18,7 +20,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json']
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,

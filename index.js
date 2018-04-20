@@ -5,7 +5,7 @@ import './css/main.css';
 
 import FriendsContainer from './js/FriendsContainer';
 // import './js/YDKJS1'; import './js/YDKJS2-1';
-import './js/YDKJS2-2';
+// import './js/YDKJS2-2';
 
 function App() {
   return (
