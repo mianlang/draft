@@ -1,4 +1,27 @@
 (function gy() {
+  console.log('--------------YDKJS2-2 activated--------------');
+
+  // function* foo(x) {
+  //   const y = x * (yield);
+  //   return y;
+  // }
+  // const it = foo(6);
+  // it.next();
+  // const res = it.next(7);
+  // console.log(res.value);
+
+  // let x = 1;
+  // function bar() {
+  //   x += 1;
+  // }
+  // function* foo() {
+  //   x += 1;
+  //   bar();
+  //   yield;
+  //   console.log('x:', x);
+  // }
+  // foo();
+
   // 保证本地 master 与远程同步, 使用 pull, push, merge --squash
   // 每次需要工作时, checkout -b xxxxx
   // 小更改 commit -a -m 'xx'
@@ -11,21 +34,6 @@
   // merge xxxxx --squash
   // push
   // git branch -D xxxxx
-
-  console.log('--------------YDKJS2-2 activated--------------');
-  console.log('squash1');
-  console.log('squash2');
-  console.log('squash3');
-  console.log('master change');
-  console.log('123456777 master change');
-
-  // console.log('sq1');
-  // console.log('sq2');
-  // console.log('sq3');
-
-  console.log('cmyt');
-
-  console.log('999');
 
   // function asyncify(fn) {
   //     var orig_fn = fn,
