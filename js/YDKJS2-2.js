@@ -1,5 +1,39 @@
 (function gy() {
   console.log('--------------YDKJS2-2 activated--------------');
+  let a = 1;
+  let b = 2;
+  function* foo() {
+    a += 1;
+    yield;
+    b *= a;
+    a = (yield b) + 3;
+    console.log(a, b, '123');
+  }
+  function* bar() {
+    b -= 1;
+    yield;
+    a = (yield 8) + b;
+    b = a * (yield 2);
+  }
+  const it = foo();
+  let last;
+  last = it.next(last).value;
+  last = it.next(last).value;
+  it.next(last);
+  // 辅助函数完成上述功能
+  function step(gen) {
+    const itt = gen();
+    let lastt;
+    return function s123() {
+      lastt = itt.next(lastt).value;
+    };
+  }
+  const s2 = step(bar);
+  s2();
+  s2();
+  s2();
+  s2();
+  console.log(a, b);
 
   // function* foo(x) {
   //   const y = x * (yield);

@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: [
+    'babel-polyfill',
     'react-hot-loader/patch',
     // 入口文件
     './index.jsx',
@@ -33,7 +34,7 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react'],
+          presets: ['es2015', 'stage-0', 'react'],
         },
       },
       {
