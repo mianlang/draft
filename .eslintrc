@@ -7,6 +7,7 @@
     "arrow-parens": "off",
     "no-console": "off",
     "wrap-iife": "off",
-    "max-len": "off"
+    "max-len": "off",
+    "no-mixed-operators": "off"
   }
 }

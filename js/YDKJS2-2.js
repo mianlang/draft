@@ -1,39 +1,176 @@
 (function gy() {
   console.log('--------------YDKJS2-2 activated--------------');
-  let a = 1;
-  let b = 2;
-  function* foo() {
-    a += 1;
-    yield;
-    b *= a;
-    a = (yield b) + 3;
-    console.log(a, b, '123');
-  }
-  function* bar() {
-    b -= 1;
-    yield;
-    a = (yield 8) + b;
-    b = a * (yield 2);
-  }
-  const it = foo();
-  let last;
-  last = it.next(last).value;
-  last = it.next(last).value;
-  it.next(last);
-  // 辅助函数完成上述功能
-  function step(gen) {
-    const itt = gen();
-    let lastt;
-    return function s123() {
-      lastt = itt.next(lastt).value;
-    };
-  }
-  const s2 = step(bar);
-  s2();
-  s2();
-  s2();
-  s2();
-  console.log(a, b);
+
+  // function factorial(n) {
+  //   function fact(v, res) {
+  //     if (v < 2) return res;
+  //     return fact(v - 1, v * res);
+  //   }
+  //   return fact(n, 1);
+  // }
+  // console.log(factorial(5));
+
+  // function* foo() {
+  //   console.log('* foo() starting');
+  //   yield 3;
+  //   yield 4;
+  //   console.log('* foo() finished');
+  // }
+  // function* bar() {
+  //   yield 1;
+  //   yield 2;
+  //   yield* foo();
+  //   yield 5;
+  // }
+  // const it = bar();
+  // console.log(it.next().value); // 1
+  // console.log(it.next().value); // 2
+  // console.log(it.next().value); // '* foo() starting' 3
+  // console.log(it.next().value); // 4
+  // console.log(it.next().value); // '* foo() finished' 5
+
+  // function* main() {
+  //   const x = yield 'ello world';
+  //   console.log(x);
+  // }
+  // const it = main();
+  // it.next();
+  // try {
+  //   it.throw('Oops');
+  // } catch (err) {
+  //   console.log(err);
+  // }
+
+  // function* main() {
+  //   const x = yield 'Hello World';
+  //   yield console.log(x.toLowerCase());
+  // }
+  // const it = main();
+  // console.log(it.next().value);
+  // try {
+  //   it.next('dDD');
+  // } catch (err) {
+  //   console.log(err);
+  // }
+
+  // function* something() {
+  //   let nextVal;
+  //   nextVal = nextVal || 1;
+  //   while (true) {
+  //     console.log(nextVal);
+  //     nextVal = 3 * nextVal + 6;
+  //     yield nextVal;
+  //   }
+  // }
+  // const it = something();
+  // it.next();
+  // it.next();
+  // it.next();
+  // it.next();
+
+  // for (let i = 0; i < 10; i += 1) {
+  //   if (i === 7) {
+  //     break;
+  //   }
+  //   console.log(i);
+  // }
+
+  // const something = (() => {
+  //   let nextVal;
+  //   return {
+  //     [Symbol.iterator]: () => this,
+  //     next: () => {
+  //       if (nextVal === undefined) {
+  //         nextVal = 1;
+  //       } else {
+  //         nextVal = 3 * nextVal + 6;
+  //       }
+  //       return {
+  //         done: false,
+  //         value: nextVal,
+  //       };
+  //     },
+  //   };
+  // })();
+  // console.log(something.next().value);
+  // console.log(something.next().value);
+  // console.log(something.next().value);
+  // console.log(something.next().value);
+
+  // let a = 1;
+  // let b = 2;
+  // function* foo() {
+  //   a += 1;
+  //   yield;
+  //   b *= a;
+  //   a = (yield b) + 3;
+  //   console.log(a, b, '123');
+  // }
+  // function* bar() {
+  //   b -= 1;
+  //   yield;
+  //   a = (yield 8) + b;
+  //   b = a * (yield 2);
+  //   // 此处效果等价于 yield(a * 2)
+  // }
+  // function step(gen) {
+  //   const it = gen();
+  //   let last;
+  //   return function s123() {
+  //     last = it.next(last).value;
+  //   };
+  // }
+  // const s1 = step(foo);
+  // const s2 = step(bar);
+  // s2();
+  // console.log(a, b);
+  // s2();
+  // console.log(a, b);
+  // s1();
+  // console.log(a, b);
+  // s2();
+  // console.log(a, b);
+  // s1();
+  // console.log(a, b);
+  // s1();
+  // console.log(a, b);
+  // s2();
+  // console.log(a, b);
+
+  // let a = 1;
+  // let b = 2;
+  // function* foo() {
+  //   a += 1;
+  //   yield;
+  //   b *= a;
+  //   a = (yield b) + 3;
+  //   console.log(a, b, '123');
+  // }
+  // function* bar() {
+  //   b -= 1;
+  //   yield;
+  //   a = (yield 8) + b;
+  //   b = a * (yield 2);
+  // }
+  // const it = foo();
+  // let last;
+  // last = it.next(last).value;
+  // last = it.next(last).value;
+  // it.next(last);
+  // // 辅助函数完成上述功能
+  // function step(gen) {
+  //   const itt = gen();
+  //   let lastt;
+  //   return function s123() {
+  //     lastt = itt.next(lastt).value;
+  //   };
+  // }
+  // const s2 = step(bar);
+  // s2();
+  // s2();
+  // s2();
+  // s2();
+  // console.log(a, b);
 
   // function* foo(x) {
   //   const y = x * (yield);
