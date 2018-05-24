@@ -4,10 +4,12 @@
     "browser": true
   },
   "rules": {
-    "arrow-parens": "off",
+    "arrow-parens": "warn",
+    "eqeqeq": "warn",
+    "max-len": "warn",
     "no-console": "off",
-    "wrap-iife": "off",
-    "max-len": "off",
-    "no-mixed-operators": "off"
+    "no-mixed-operators": "warn",
+    "no-use-before-define": "warn",
+    "wrap-iife": "off"
   }
 }
