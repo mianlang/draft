@@ -9,7 +9,11 @@
     "max-len": "warn",
     "no-console": "off",
     "no-mixed-operators": "warn",
+    "no-unused-expressions": "warn",
     "no-use-before-define": "warn",
+    "prefer-const": "warn",
+    "prefer-rest-params": "warn",
+    "prefer-spread": "warn",
     "wrap-iife": "off"
   }
 }
