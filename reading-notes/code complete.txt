@@ -1,0 +1,169 @@
+ooooo ovooo
+ooooo oovoo
+ooooo ooooo
+oovoo
+
+01 打好基础 Laying the Foundation
+1. 欢迎进入软件构建的世界
+
+2. 用隐喻来更充分地理解软件开发
+
+3. 三思而后行：前期准备
+
+4. 关键的「构建」决策
+
+02 创建高质量的代码 Creating High-Quality Code
+5. 软件构建中的设计
+
+6. 可以工作的类
+
+7. 高质量的子程序 High-Quality Routines _vv_
+18-6-15
+7.1 Valid Reasons to Create a Routine
+Operations That Seems Too Simple to Put Into Routines
+Summary of Reasons to Create a Routine
+降低复杂度
+引入中间的、易懂的抽象
+避免代码重复
+支持子类化
+隐藏顺序
+隐藏指针操作
+提高可移植性
+简化复杂的逻辑判断
+改善性能
+---创建类的很多理由也是创建子程序的理由---
+隔离复杂度
+隐藏实现细节
+限制变化所带来的影响
+隐藏全局数据
+形成中央控制点
+促成可重用的代码
+达到特定的重构目的
+7.2 Design at the Routine Level (cohesion) vvv
+7.3 Good Routine Names (JS 中，使用 format.toDate(dueDate) 还是 dueDate.format.toDate()?)
+7.4 How Long Can a Routine Be
+7.5 How to Use Routine Parameters
+7.6 Special Considerations in the Use of Functions
+When to Use a Function and When to Use a Procedure
+Setting the Function's Return Value
+7.7 Macro Routines and Inline Routines
+Limitations on the Use of Macro Routines
+Inline Routines
+
+8. 防御式编程 ooo
+
+9. 伪代码编程过程
+
+03 变量 Variables
+10. 使用变量的一般事项 oo
+
+11. 变量名的力量 oo
+
+12. 基本数据类型
+
+13. 不常见的数据类型 oo
+
+04 语句 Statements
+14. 组织直线型代码
+
+15. 使用条件语句
+
+16. 控制循环
+
+17. 不常见的控制结构
+
+18. 表驱动法 Table-Driven Methods _vv_
+18-6-15
+18.1 General Considerations in Using Table-Driven Methods
+Two Issues in Using Table-Driven Methods
+18.2 Direct Access Table _??_
+Days-in-Month Example
+Insurance Rates Example
+Flexible-Message-Format Example
+Logic-Based Approach
+Object-Oriented Approach
+Table-Driven Approach
+Fudging Lookup Keys
+18.3 Indexed Access Tables
+18.4 Stair-Step Access Tables
+18.5 Other Examples of Table Lookups
+
+19. 一般控制问题
+
+05 Code Improvement
+20. 软件质量概述 oo
+
+21. 协同构建
+
+22. 开发者测试 oo
+
+23. 调试
+
+24. 重构
+
+25. 代码调整策略 ooo
+
+26. 代码调整技术 oo
+
+27. 程序规模对构建的影响
+
+28. 管理构建 o
+
+29. 集成 o
+
+30. 编程工具
+
+31. 布局与风格
+
+32. 自说明代码 o
+
+33. 个人性格  Personal Character _vvv_
+18-6-14
+33.1 Isn't Personal Character Off the Topic?
+33.2 Intelligence and Humility
+33.3 Curiosity
+33.4 Intellectual Honesty vvvvv
+「先编译看看程序会干什么」是个警告信号，也许意味着你该回到规划阶段，或者你在着手编程时还不清楚要做什么。请确保在将程序丢给编译器之前，你已对其有了较大的把握
+他可以让估计更精确，但和上司商量并不会改变（减少）开发软件项目需要的时间
+「技术人员大都能很好地估计项目需求和进度。但问题是他们不会坚持自己的决定，需要学习如何坚守其立场」
+33.5 Communication and Cooperation
+33.6 Creativity and Discipline vv
+33.7 Laziness
+33.8 Characteristics That Don't Matter As Much As You Might Think(!Persistence, !Experience, !Gonzo Programming)
+33.9 Habits vv
+Additional Resources
+Edsger Dijkstra 图灵奖发言稿《The Humble Programmer》
+Weinberg, Gerald M.《The Psychology of Computer Programming: Silver Anniversary Edition》
+Pirsig, Robert M.《Zen and the Art of Motorcycle Maintenance: An Inquiry into Values》
+Curtis, Bill, ed.《Tutorial: Human Factors in Software Development》
+McConnell, Steve《Professional Software Development》
+
+34. 软件工艺的话题
+
+35. 何处有更多信息
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
